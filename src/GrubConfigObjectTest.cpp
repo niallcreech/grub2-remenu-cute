@@ -37,17 +37,58 @@ void GrubConfigObjectTest::testConstructor() {
 		std::list<std::string>::const_iterator it_default_keys = default_keys.begin();
 		const std::list<std::string>::const_iterator it_default_keys_end = default_keys.end();
 		while (it_default_keys != it_default_keys_end) {
-			ASSERT(obj_keys.find(*it_default_keys) != obj_keys.end() );
+			ASSERT(obj_keys.find(*it_default_keys) != obj_keys.end());
 			++it_default_keys;
 		}
 	}
 
 }
 void GrubConfigObjectTest::testParseConfig() {
-	ASSERTM("TODO", false);
+	const std::string CFG_FILE = "data/grub.cfg";
+	GrubConfigObject obj(CFG_FILE);
+	obj.parseConfig();
+
+	// test has 6 menuentry
+
+	const std::map<std::string, std::list<std::string> > & raw_data = obj.getConfigKeys();
+	ASSERT(raw_data.size()>0);
+
+	// check menuentries
+	{
+		const std::string key = GRUB_MENUENTRY_TEXT;
+		const std::map<std::string, std::list<std::string> >::const_iterator it_found = raw_data.find(key);
+		ASSERT(it_found!=raw_data.end());
+		size_t raw_entry_count = raw_data.begin()->second.size();
+		ASSERT_EQUAL(6, raw_entry_count);
+
+	}
 }
+
 void GrubConfigObjectTest::testParseMenuEntries() {
-	ASSERTM("TODO", false);
+	const std::string CFG_FILE = "data/grub.cfg";
+	GrubConfigObject obj(CFG_FILE);
+	obj.parseConfig();
+
+	// test has 6 menuentry
+
+	const std::map<std::string, std::list<std::string> > & entry_data = obj.getConfigEntries();
+	ASSERT(entry_data.size()>0);
+
+	// check menuentries
+	{
+		const std::string key = GRUB_MENUENTRY_TEXT;
+		std::map<std::string, std::list<std::string> >::const_iterator it_found = entry_data.find(key);
+		ASSERT(it_found!=entry_data.end());
+		size_t raw_entry_count = entry_data.begin()->second.size();
+		ASSERT_EQUAL(6, raw_entry_count);
+		const std::vector<std::string> entries(it_found->second.begin(), it_found->second.end());
+		ASSERT_EQUAL("MenuEntryA", entries.at(0));
+		ASSERT_EQUAL("MenuEntryB", entries.at(1));
+		ASSERT_EQUAL("MenuEntryC", entries.at(2));
+		ASSERT_EQUAL("MenuEntryD", entries.at(3));
+		ASSERT_EQUAL("MenuEntryE", entries.at(4));
+		ASSERT_EQUAL("MenuEntryF", entries.at(5));
+	}
 }
 
 } /* namespace remenu */
