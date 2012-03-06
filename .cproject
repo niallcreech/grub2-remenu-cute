@@ -54,9 +54,9 @@
 								<option id="gnu.cpp.link.option.paths.1233706043" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
 								<option id="gnu.cpp.link.option.libs.2039894915" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs"/>
 								<option id="gnu.cpp.link.option.flags.601252906" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="`pkg-config --libs gtkmm-2.4 libgksu2` " valueType="string"/>
-								<option id="gnu.cpp.link.option.userobjs.1846476792" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Cute/src/GrubConfigObject.o}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Cute/src/GrubScriptObject.o}&quot;"/>
+								<option id="gnu.cpp.link.option.userobjs.1846476792" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Debug/src/GrubConfigObject.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Debug/src/GrubScriptObject.o}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.613839408" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

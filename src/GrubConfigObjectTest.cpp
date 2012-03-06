@@ -44,8 +44,10 @@ void GrubConfigObjectTest::testConstructor() {
 
 }
 void GrubConfigObjectTest::testParseConfig() {
+	ASSERTM("TODO", false);
 }
 void GrubConfigObjectTest::testParseMenuEntries() {
+	ASSERTM("TODO", false);
 }
 
 } /* namespace remenu */
