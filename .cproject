@@ -51,12 +51,13 @@
 							</tool>
 							<tool commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}  ${FLAGS} ${INPUTS}" id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.862033798" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool commandLinePattern="${COMMAND} ${INPUTS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}  ${FLAGS} " id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.801138350" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
-								<option id="gnu.cpp.link.option.paths.1233706043" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
+								<option id="gnu.cpp.link.option.paths.1233706043" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Cute}&quot;"/>
+								</option>
 								<option id="gnu.cpp.link.option.libs.2039894915" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs"/>
-								<option id="gnu.cpp.link.option.flags.601252906" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="`pkg-config --libs gtkmm-2.4 libgksu2` " valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.601252906" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="`pkg-config --libs gtkmm-2.4 libgksu2`  " valueType="string"/>
 								<option id="gnu.cpp.link.option.userobjs.1846476792" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Debug/src/GrubConfigObject.o}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Debug/src/GrubScriptObject.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Cute/libgrub2-remenu}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.613839408" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -71,6 +72,7 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.412689776.512930848" name="cute.h" rcbsApplicability="disable" resourcePath="cute/cute.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry excluding="cute|src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
@@ -80,16 +82,17 @@
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
 				<externalSettings containerId="org.eclipse.cdt.managedbuilder.pkgconfig.extSettings" factoryId="org.eclipse.cdt.core.extension.container.factory">
+					<externalSetting contentTypes="org.eclipse.cdt.core.cSource:org.eclipse.cdt.core.cxxSource"/>
 					<externalSetting contentTypes="org.eclipse.cdt.managedbuilder.core.compiledObjectFile"/>
-					<externalSetting contentTypes="org.eclipse.cdt.core.cxxSource"/>
-					<externalSetting contentTypes="org.eclipse.cdt.core.cSource"/>
 				</externalSettings>
 			</storageModule>
 			<storageModule moduleId="packages"/>
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.exe.release.361985596">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.release.361985596" moduleId="org.eclipse.cdt.core.settings" name="Release">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting/>
+				</externalSettings>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -124,12 +127,8 @@
 							</tool>
 							<tool commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}  ${FLAGS} ${INPUTS}" id="cdt.managedbuild.tool.gnu.c.linker.exe.release.1531774443" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}  ${FLAGS} ${INPUTS}" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.670537030" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
-								<option id="gnu.cpp.link.option.paths.170385710" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/src}&quot;"/>
-								</option>
-								<option id="gnu.cpp.link.option.libs.360970524" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Cute/libgrub2-remenu}&quot;"/>
-								</option>
+								<option id="gnu.cpp.link.option.paths.170385710" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
+								<option id="gnu.cpp.link.option.libs.360970524" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs"/>
 								<option id="gnu.cpp.link.option.flags.1911724142" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="`pkg-config --libs gtkmm-2.4 libgksu2`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1184018000" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -138,14 +137,13 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.1398662190" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
 								<option id="gnu.both.asm.option.include.paths.1345385380" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu-cute/cute}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/grub2-remenu/Default/src}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1730762201" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.361985596.362214933" name="cute.h" rcbsApplicability="disable" resourcePath="cute/cute.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry excluding="cute|src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>

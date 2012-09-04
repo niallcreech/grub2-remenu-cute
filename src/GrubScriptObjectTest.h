@@ -18,7 +18,7 @@ public:
 	virtual ~GrubScriptObjectTest(){};
 
 	static  void runSuite();
-	static void testGetSetClearRenameMenu();
+	static void testGetSetClearRename();
 };
 
 } /* namespace remenu */
